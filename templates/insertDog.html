@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">  <!-- 🔹 Define la codificación para admitir caracteres especiales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- 🔹 Permite que el sitio sea responsive -->
+    <title>Registrar Perro</title>  <!-- 🔹 Título de la página -->
+</head>
+<body>
+    <h1>Registrar Nuevo Perro</h1>  <!-- 🔹 Encabezado de la página -->
+
+    <!-- 🔹 Formulario para ingresar datos del perro -->
+    <form id="dogForm">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" placeholder="Nombre" required>  <!-- 🔹 Campo obligatorio para el nombre -->
+        <label for="breed">Raza:</label>
+        <input type="text" id="breed" placeholder="Raza" required>  <!-- 🔹 Campo obligatorio para la raza -->
+        <label for="dob">Fecha de nacimiento:</label>
+        <input type="date" id="dob" required>  <!-- 🔹 Campo de fecha para el nacimiento -->
+        <label for="gender">Género:</label>
+        <input type="text" id="gender" placeholder="Género" required>  <!-- 🔹 Campo obligatorio para género -->
+        <label for="photo">Foto:</label>
+        <input type="text" id="photo" placeholder="URL de la foto">  <!-- 🔹 URL opcional para la foto -->
+
+        <label for="father">Padre:</label>
+        <input type="text" id="father" placeholder="Escribe el nombre del padre">
+        <ul id="fatherSuggestions"></ul> <!-- 🔹 Aquí se mostrarán los nombres sugeridos -->
+        
+        <label for="mother">Madre:</label>
+        <input type="text" id="mother" placeholder="Escribe el nombre de la madre">
+        <ul id="motherSuggestions"></ul> <!-- 🔹 Aquí se mostrarán los nombres sugeridos -->
+        
+
+
+
+        <button type="submit">Registrar</button>  <!-- 🔹 Botón para enviar el formulario -->
+    </form>
+
+    <!-- 🔹 Importa el script que maneja la inserción -->
+    <script type="module" src="{{ url_for('static', filename='js/insertDog.js') }}"></script>
+</body>
+</html>

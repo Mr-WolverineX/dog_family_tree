@@ -1,0 +1,8 @@
+# 📌 Ignorar archivos sensibles
+.env
+__pycache__/
+verificar_conexion.py
+auth.py
+.vscode/
+uploads/
+*.log
